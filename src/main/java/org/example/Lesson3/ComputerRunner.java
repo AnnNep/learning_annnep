@@ -1,4 +1,4 @@
-package org.example.Lesson2;
+package org.example.Lesson3;
 
 public class ComputerRunner {
     public static void main(String[] args) {

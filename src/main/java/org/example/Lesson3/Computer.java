@@ -1,4 +1,4 @@
-package org.example.Lesson2;
+package org.example.Lesson3;
 
 public class Computer {
     int ssd = 500; //Поля класса (поля со значением - состояние объекта)
