@@ -20,8 +20,7 @@ public class Computer {
     }
 
     public Computer () { //Если конструктор без параметров, в наследнике можно упустить строчку super();
-        System.out.println("Constructor computer"); //В конструкторе без параметров вызвать конструктор с параметроми
-                                   // Чтобы не дублировать код в конструкторах
+        System.out.println("Constructor computer");
     }
 
     //Public методы можно называть интерфейсом (открытая часть класса)
