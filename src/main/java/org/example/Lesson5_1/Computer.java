@@ -5,13 +5,22 @@ public class Computer {
     private Ssd ssd;
     private Ram ram; //Поля с private можнем считать инкапсуляцией
 
+    {
+        System.out.println("init block computer");
+    }
+//Static блок инициализации вызывается первым, так как относитмся к объекту класса класс
+//Однако от single tone, т. е. существует в 1 экземпляре
+    static {
+        System.out.println("static block computer");
+    }
+
     public Computer (Ssd ssd, Ram ram) {
         this.ssd = ssd;
         this.ram = ram;
     }
 
     public Computer () { //Если конструктор без параметров, в наследнике можно упустить строчку super();
-        this(null, null); //В конструкторе без параметров вызвать конструктор с параметроми
+        System.out.println("Constructor computer"); //В конструкторе без параметров вызвать конструктор с параметроми
                                    // Чтобы не дублировать код в конструкторах
     }
 

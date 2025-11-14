@@ -4,6 +4,16 @@ package org.example.Lesson5_1;
 public class Laptop extends Computer {
 //Наследование - объект одного класса наследует поля/функционал от другого
     private int weight;
+
+    //Блоки инициализации
+    {
+        System.out.println("init block laptop");
+    }
+
+    static {
+        System.out.println("static block laptop");
+    }
+
 //В самой первой строчке конструктора-наследника обязан быть вызван конструктор баз класса через супер
     public Laptop(Ssd ssd, Ram ram, int weight) {
         super(ssd, ram); //через super можно достучаться до всего, что доступно в базовом классе
@@ -12,6 +22,11 @@ public class Laptop extends Computer {
         super.getSsd();
         getWeight();
     }
+
+    public Laptop() {
+        System.out.println("Constructor laptop");
+    }
+
 //В java можно наследовать только 1 класс, в с++ много
     public void open() {
         System.out.println("Opening laptop");
