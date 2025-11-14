@@ -1,4 +1,5 @@
 package org.example.Lesson5_1;
+// Laptop <- Computer <- Object (класс, наследуемый по умолчанию)
 
 public class Laptop extends Computer {
 //Наследование - объект одного класса наследует поля/функционал от другого

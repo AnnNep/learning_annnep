@@ -13,6 +13,8 @@ public class OOPLessonRunner {
         Laptop laptop = new Laptop (new Ssd(500),new Ram(1024), 2);
         laptop.open();
         laptop.load();
+        System.out.println(laptop); // В println есть String.valueOf, в котором есть obj.toString
+        //Выводит полное название класса и hashcode
 
     }
 }

@@ -9,6 +9,12 @@ public class Computer {
         this.ssd = ssd;
         this.ram = ram;
     }
+
+    public Computer () { //Если конструктор без параметров, в наследнике можно упустить строчку super();
+        this(null, null); //В конструкторе без параметров вызвать конструктор с параметроми
+                                   // Чтобы не дублировать код в конструкторах
+    }
+
     //Public методы можно называть интерфейсом (открытая часть класса)
     public void load() {
         System.out.println("Loading...");
