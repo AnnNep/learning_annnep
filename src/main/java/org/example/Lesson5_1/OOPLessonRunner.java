@@ -8,7 +8,8 @@ public class OOPLessonRunner {
         Computer computer = new Computer(ssd, ram);
         computer.load();
         double sin = Math.sin(2.5);
-
+        //Инкапсуляция - скрытие сложностей кода, то есть один раз написал
+        // сложную функцию, в дальнейшем просто вызывю метод
         Laptop laptop = new Laptop (new Ssd(500),new Ram(1024), 2);
         laptop.open();
         laptop.load();
