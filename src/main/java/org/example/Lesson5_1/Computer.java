@@ -1,6 +1,7 @@
 package org.example.Lesson5_1;
 
-public class Computer {
+public abstract class Computer {
+//Абстрактный класс - класс, созданный только для того, чтобы его наследовали (+ запрещает создавать объект класса)
     //Инкапсуляция - скрытие данных (сложностей в коде) от пользователя
     private Ssd ssd;
     private Ram ram; //Поля с private можнем считать инкапсуляцией
@@ -22,11 +23,14 @@ public class Computer {
     public Computer () { //Если конструктор без параметров, в наследнике можно упустить строчку super();
         System.out.println("Constructor computer");
     }
-
     //Public методы можно называть интерфейсом (открытая часть класса)
-    public void load() {
-        System.out.println("Loading...");
-    }
+
+    public abstract void load(); //Абстрактный метод не имеет ревлизации
+                                 //Вопрос: зачем он тогда вообще нужен?
+
+//    public void load() {
+//        System.out.println("Loading...");
+//    }
 
     public Ssd getSsd() {
         return ssd;

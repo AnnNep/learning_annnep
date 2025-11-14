@@ -1,8 +1,9 @@
 package org.example.Lesson5_1;
 // Laptop <- Computer <- Object (класс, наследуемый по умолчанию)
 
-public class Laptop extends Computer {
+public final class Laptop extends Computer {
 //Наследование - объект одного класса наследует поля/функционал от другого
+//Final - запрет на наследование от данного класса
     private int weight;
 
     //Блоки инициализации
@@ -27,7 +28,12 @@ public class Laptop extends Computer {
         System.out.println("Constructor laptop");
     }
 
-//В java можно наследовать только 1 класс, в с++ много
+    @Override //Переопределение методов
+    public void load() {
+
+    }
+
+    //В java можно наследовать только 1 класс, в с++ много
     public void open() {
         System.out.println("Opening laptop");
     }
