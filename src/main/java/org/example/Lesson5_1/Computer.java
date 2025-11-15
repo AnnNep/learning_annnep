@@ -1,6 +1,6 @@
 package org.example.Lesson5_1;
 
-public abstract class Computer {
+public abstract class Computer implements Printable{ //Наследники так же реализуют интерфейс
 //Абстрактный класс - класс, созданный только для того, чтобы его наследовали (+ запрещает создавать объект класса)
     //Инкапсуляция - скрытие данных (сложностей в коде) от пользователя
     private Ssd ssd;
@@ -32,6 +32,7 @@ public abstract class Computer {
 //        System.out.println("Loading...");
 //    }
 
+    @Override //Не обязательная аннотация, но лучше ее ставить (метод достался из др. абстрактных классов, наследования или интерфейса)
     public void print() {
         System.out.println("Ssd: " + ssd.getValue() + " Ram: " + ram.getValue());
     }
