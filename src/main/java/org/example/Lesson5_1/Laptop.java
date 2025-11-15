@@ -30,7 +30,15 @@ public final class Laptop extends Computer {
 
     @Override //Переопределение методов
     public void load() {
+        open();
+        System.out.println("Я загрузился");
+    }
+//При переопределении метода можно изменять его: добавить функционал, отказаться от функционала базового класса, менять последовательность
 
+    @Override
+    public void print() { //Переопределение не абстрактного метода
+        super.print();
+        System.out.println("weight = " + weight);
     }
 
     //В java можно наследовать только 1 класс, в с++ много
