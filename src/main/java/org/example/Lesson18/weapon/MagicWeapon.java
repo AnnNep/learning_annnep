@@ -1,4 +1,4 @@
 package org.example.Lesson18.weapon;
 
-public interface MagicWeapon extends Weapon{
+public interface MagicWeapon extends Weapon {
 }
