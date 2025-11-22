@@ -1,7 +1,11 @@
 package org.example.Lesson12;
 
-public class Archer extends Hero {
+import org.example.Lesson18.weapon.RangeWeapon;
 
+public class Archer<T extends RangeWeapon> extends Hero<T> { //Параметризуем Арчер, полученный параметр передаем (используем) Хиро + ограничиваем использование
+//<T extends RangeWeapon> - ограничение для Арчера, я могу параметризовать любым типом, который экстендит/наследует RageWeapon (тут может быть как интерфейс, так и любой класс)
+//extends - общее слово для дженериков
+//Каждый класс может быть параметризован нескольками дженерик типами, таким образом кажному экстендс присваиваем букву
     private Wolf wolf;
 
     public Archer(String name, int damage) {
@@ -22,7 +26,7 @@ public class Archer extends Hero {
         System.out.println(getName() + " стрельнул из лука в " + enem.getName());
         wolf.attackEnemy(enem);
     }
-    public static class Wolf{ //Без static - внутренний класс, с static - вложенный
+    public class Wolf{ //Без static - внутренний класс, с static - вложенный
         private String name;
         private int damage;
 

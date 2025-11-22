@@ -1,6 +1,8 @@
 package org.example.Lesson12;
 
-public class Warrior extends Hero {
+import org.example.Lesson18.weapon.MeleeWeapon;
+
+public class Warrior<T extends MeleeWeapon> extends Hero<T> {
     public Warrior(String name, int damage) {
         super(name, damage);
     }
