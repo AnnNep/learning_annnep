@@ -12,7 +12,7 @@ public class WeaponRunner {
      static void main(String[] args) {
         Archer<Bow> archer = new Archer<>("Леголас", 15);
         archer.setWeapon(new Bow()); //Из всех оружий можем дать только Лук
-
+ 
         Warrior<Sword> warrior = new Warrior<>("Боромир", 15);
         warrior.setWeapon(new Sword());
 
