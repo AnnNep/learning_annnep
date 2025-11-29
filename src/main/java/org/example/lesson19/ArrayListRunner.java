@@ -1,11 +1,22 @@
 package org.example.lesson19;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayListRunner {
     static void main(String[] args) {
-        List<Integer> integers = new ArrayList<>(5);
+        List<Integer> integers = new LinkedList<>();
+        //LinkedList - реализация списка, которая не базируется на массиве
+        //LinkedList - список, у которого есть ссылки на первый элемент и последний
+        //Node <E> - оболочка одного элемента массива (занимает в 3 раза больше памяти, чем в аррейЛисте)
+        //E item
+        //Node<E> next
+        //Node<E> prev
+        //Сравнение ArrayList и LinkedList
+        //Поиск по значению: ArrayList и LinkedList - сравнивание каждого элемента, пока не найдем одинаковые O(n)
+        //Поиск по индексу: ArrayList O(1) быстрее, чем LinkedList O(n)
+        //Добавить или удалить элемент: ArrayList и LinkedList - одинаковое количество времени O(n) (но ArrayList проигрывает по памяти O(n), т. к. мы копируем часть массива, а в LinkedList O(1) мы просто меняем ссылки)
       //Мы не можем использовать в качестве дженериков примитивные типы <int>, поэтому пишем обертку для этого типа <Integer>
         //Мы должны программировать на уровне интерфейсов, а не их реализаций, поэтому заменяем
         //ArrayList<Integer> integers = new ArrayList<>();
