@@ -2,7 +2,7 @@ package org.example.lesson20.person;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     private int id;
     private String name;
@@ -49,5 +49,13 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return Integer.compare(this.id, o.id); //то же самое, что снизу, но лаконичнее
+//        if (id < o.id) return -1;
+//        else if (id > o.id) return 1;
+//        else return 0;
     }
 }
